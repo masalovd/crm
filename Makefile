@@ -2,7 +2,7 @@
 		superuser install update
 
 
-update: install migrate;
+update: install migrate install-pre-commit;
 
 run-server:
 	poetry run python -m crm.manage runserver
@@ -18,6 +18,12 @@ collectstatic:
 
 superuser:
 	poetry run python -m crm.manage createsuperuser
+
+run-pre-commit:
+	poetry run pre-commit run --all-files
+
+install-pre-commit:
+	poetry run pre-commit uninstall; poetry run pre-commit install
 
 install:
 	poetry install

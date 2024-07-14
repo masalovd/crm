@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "crm-app"
+version = "0.1.0"
+description = ""
+authors = ["Dmytro Masalov <dmitriymasalov5@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.7"
+psycopg = "^3.2.1"
+python-decouple = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

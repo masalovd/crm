@@ -17,6 +17,7 @@ python-decouple = "^3.8"
 flake8 = "^7.1.0"
 black = "^24.4.2"
 pre-commit = "^3.7.1"
+commitizen = "^3.27.0"
 
 [tool.black]
 line-length = 88
@@ -26,6 +27,13 @@ target-version = ['py312']
 line_length = 88
 multi_line_output = 3
 
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

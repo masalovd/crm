@@ -25,10 +25,6 @@ commitizen = "^3.27.0"
 line-length = 88
 target-version = ['py312']
 
-[tool.isort]
-line_length = 88
-multi_line_output = 3
-
 [tool.commitizen]
 name = "cz_conventional_commits"
 tag_format = "v$version"

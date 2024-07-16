@@ -1,0 +1,38 @@
+{% extends "customers/base.html" %}
+
+{% block content %}
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Region</th>
+            <th scope="col">Zip code</th>
+            <th scope="col">Created at</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{record.first_name}} {{record.last_name}}</td>
+            <td>{{ record.email }}</td>
+            <td>{{ record.phone }}</td>
+            <td>{{ record.address }}</td>
+            <td>{{ record.city }}</td>
+            <td>{{ record.region }}</td>
+            <td>{{ record.zipcode }}</td>
+            <td>{{ record.created_at }}</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Record Actions">
+                    <a class="btn btn-outline-primary" href="{% url 'record-update' record.id %}">Update</a>
+                    <a class="btn btn-outline-danger" href="{% url 'record-delete' record.id %}">Delete</a>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

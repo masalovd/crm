@@ -124,6 +124,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 LOGIN_URL = "login"
 
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "user-record-list"
 
 LOGOUT_REDIRECT_URL = "home"

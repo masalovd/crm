@@ -1,5 +1,5 @@
-.PHONY: run-server makemigrations migrate collectstatic \
-		superuser install update
+.PHONY: run-server run-pre-commit makemigrations migrate collectstatic \
+		superuser install install-pre-commit update
 
 
 update: install migrate install-pre-commit;

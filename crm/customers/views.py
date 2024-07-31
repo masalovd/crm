@@ -13,6 +13,18 @@ def home(request: HttpRequest) -> HttpResponse:
     return render(request, "customers/home.html")
 
 
+def about(request: HttpRequest) -> HttpResponse:
+    return render(request, "customers/about.html")
+
+
+def contacts(request: HttpRequest) -> HttpResponse:
+    return render(request, "customers/contacts.html")
+
+
+def help(request: HttpRequest) -> HttpResponse:
+    return render(request, "customers/help.html")
+
+
 class UserRecordListView(LoginRequiredMixin, ListView):  # type: ignore
     model = Record
     template_name = "customers/user_record_list.html"
